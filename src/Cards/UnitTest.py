@@ -39,9 +39,9 @@ class Test(unittest.TestCase):
         self.assertEqual(testCard3.GetValue(), 13, "Failed constructing correct suit King of Diamonds")
         
     def testValidAce(self):
-        testCard4 = Card(1, "Clubs") #Ace or 14
+        testCard4 = Card(14, "Clubs") #Ace or 14
         self.assertEqual(testCard4.GetSuit(), "Clubs", "Failed constructing correct suit Ace of Clubs")
-        self.assertEqual(testCard4.GetValue(), 1, "Failed constructing correct suit Ace of Clubs") 
+        self.assertEqual(testCard4.GetValue(), 14, "Failed constructing correct suit Ace of Clubs") 
         
     def testInvalidLowNum(self):
         try:
@@ -57,7 +57,14 @@ class Test(unittest.TestCase):
         except ValueError:
             pass
         
+    def testGetCard(self):
+        testCard7 = Card(14,"Spades")
+        self.assertEqual(testCard7.GetCard(), "A of Spades", "Failed to correctly return the Ace of Spades")
         
+    def testGetCardNum(self):
+        testCard8 = Card(3,"Spades")
+        self.assertEqual(testCard8.GetCard(), "3 of Spades", "Failed to correctly return the 3 of Spades")
+   
 
 
 if __name__ == "__main__":
