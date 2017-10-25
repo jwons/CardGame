@@ -5,14 +5,14 @@ Created on Oct 25, 2017
 '''
 from Card import *
 from random import shuffle
+from __builtin__ import ValueError
 
 class Deck(object):
-
-
-
     def __init__(self):
         self.cards = [Card(x, y) for x in range(2, 15) for y in ["Hearts", "Diamonds", "Clubs", "Spades"]]
-        self.size = len(self.cards)
+        
+    def Size(self):
+        return len(self.cards)
         
     def IsCard(self, value, suit):
         retVal = False
@@ -28,4 +28,13 @@ class Deck(object):
     
     def Shuffle(self):
         self.cards = shuffle(self.cards)
+    
+    def DealOut(self, numCards):
+        
+        if numCards > self.Size() or numCards < 1:
+            raise ValueError
+        
+        
+        return [self.cards.pop() for x in range(numCards)]
+    
     
