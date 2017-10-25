@@ -7,16 +7,7 @@ import unittest
 from Card import *
 
 
-class Test(unittest.TestCase):
-
-
-    def setUp(self):
-        pass
-
-
-    def tearDown(self):
-        pass
-
+class CardTest(unittest.TestCase):
 
     def testValidCardNumber(self):
         testCard0 = Card(3,"Spades")
@@ -65,6 +56,7 @@ class Test(unittest.TestCase):
         testCard8 = Card(3,"Spades")
         self.assertEqual(testCard8.GetCard(), "3 of Spades", "Failed to correctly return the 3 of Spades")
    
+    
 
 
 if __name__ == "__main__":
