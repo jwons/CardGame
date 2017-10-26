@@ -26,6 +26,9 @@ class Card():
                     
             else:
                 raise ValueError
+        else:
+            raise TypeError
+                        
               
         # Check to see if suit is valid   
         if type(suit) == str:
@@ -33,6 +36,8 @@ class Card():
                 self.suit = suit
             else:
                 raise TypeError
+        else:
+            raise TypeError
                 
     def GetValue(self):
         return self.value

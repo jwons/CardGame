@@ -52,6 +52,21 @@ class CardTest(unittest.TestCase):
     def testGetCardNum(self):
         testCard8 = Card(3,"Spades")
         self.assertEqual(testCard8.GetCard(), "3 of Spades", "Failed to correctly return the 3 of Spades")
-   
+
+    def testNonStringSuit(self):
+        try:
+            testCard9 = Card(3, 4)
+            self.assertFalse(testCard9.GetCard(), 4, "Failed to initialize card, suit must be a string type")
+        except TypeError:
+            pass
+
+    def testNonIntValue(self):
+        try:
+            testCard10 = Card("1", "Spades")
+            self.assertFalse(testCard10.GetCard(), "1", "Failed to initialize card, value must be an integer")
+        except TypeError:
+            pass
+
+
 if __name__ == "__main__":
     unittest.main()
