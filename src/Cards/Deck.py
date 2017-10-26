@@ -1,11 +1,8 @@
-'''
-Created on Oct 25, 2017
+''' Created on Oct 25, 2017
+    @author: Wonsil and Shannon '''
 
-@author: Wonsil and Shannon
-'''
 from Card import *
 from random import shuffle
-from __builtin__ import ValueError
 
 class Deck(object):
     def __init__(self):
@@ -16,10 +13,9 @@ class Deck(object):
         
     def IsCard(self, value, suit):
         retVal = False
+        
         for card in self.cards:
-            if card.GetCard() == Card(value,suit).GetCard():
-                retVal = True
-                break
+            retVal = True if card.GetCard() == Card(value,suit).GetCard()
         
         return retVal
     
@@ -30,11 +26,6 @@ class Deck(object):
         self.cards = shuffle(self.cards)
     
     def DealOut(self, numCards):
-        
-        if numCards > self.Size() or numCards < 1:
-            raise ValueError
-        
+        raise ValueError if not in range(1, self.Size())
         
         return [self.cards.pop() for x in range(numCards)]
-    
-    
