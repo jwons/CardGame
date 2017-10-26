@@ -15,7 +15,7 @@ class Deck(object):
         retVal = False
         
         for card in self.cards:
-            retVal = True if card.GetCard() == Card(value,suit).GetCard()
+            if card.GetCard() == Card(value,suit).GetCard(): retVal = True
         
         return retVal
     
@@ -26,6 +26,7 @@ class Deck(object):
         self.cards = shuffle(self.cards)
     
     def DealOut(self, numCards):
-        raise ValueError if not in range(1, self.Size())
+        if numCards not in range(1, self.Size()):
+            raise ValueError
         
         return [self.cards.pop() for x in range(numCards)]
