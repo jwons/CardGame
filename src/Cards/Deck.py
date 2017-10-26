@@ -1,7 +1,7 @@
 ''' Created on Oct 25, 2017
     @author: Wonsil and Shannon '''
 
-from Card import *
+from Card import Card
 from random import shuffle
 
 class Deck(object):
@@ -29,4 +29,4 @@ class Deck(object):
         if numCards not in range(1, self.Size()):
             raise ValueError
         
-        return [self.cards.pop() for x in range(numCards)]
+        return [self.cards.pop() for _ in range(numCards)]

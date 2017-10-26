@@ -1,11 +1,8 @@
-'''
-Created on Oct 25, 2017
-
-@author: Wonsil and Shannon
-'''
+''' Created on Oct 25, 2017
+    @author: Wonsil and Shannon '''
+    
 import unittest
-from Deck import *
-from Card import *
+from Deck import Deck
 
 class DeckTest(unittest.TestCase):
 
@@ -65,5 +62,4 @@ class DeckTest(unittest.TestCase):
         
 
 if __name__ == "__main__":
-    #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()

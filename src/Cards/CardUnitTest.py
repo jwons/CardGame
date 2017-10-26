@@ -1,11 +1,8 @@
-'''
-Created on Oct 24, 2017
-
-@author: Wonsil and Shannon
-'''
+''' Created on Oct 24, 2017
+    @author: Wonsil and Shannon '''
+    
 import unittest
-from Card import *
-
+from Card import Card
 
 class CardTest(unittest.TestCase):
 
@@ -56,9 +53,5 @@ class CardTest(unittest.TestCase):
         testCard8 = Card(3,"Spades")
         self.assertEqual(testCard8.GetCard(), "3 of Spades", "Failed to correctly return the 3 of Spades")
    
-    
-
-
 if __name__ == "__main__":
-    #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()

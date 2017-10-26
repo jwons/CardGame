@@ -1,10 +1,8 @@
-'''
-Created on Oct 25, 2017
-
-@author: Wonsil
-'''
+''' Created on Oct 25, 2017
+    @author: Wonsil and Shannon'''
+    
 import unittest
-from Table import *
+from Table import Table
 
 class TableUnitTest(unittest.TestCase):
 

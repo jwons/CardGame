@@ -1,8 +1,5 @@
-'''
-Created on Oct 24, 2017
-
-@author: Wonsil and Shannon
-'''
+''' Created on Oct 24, 2017
+    @author: Wonsil and Shannon '''
 
 class Card():
     
