@@ -4,7 +4,7 @@
 import unittest
 from Table import Table
 
-class TableUnitTest(unittest.TestCase):
+class TableTest(unittest.TestCase):
 
     def testNumPlayers(self):
         table0 = Table(2)
